@@ -16,19 +16,19 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/libcjson
-  SECTION:=libs
-  CATEGORY:=Pi_routes_os
-  TITLE:=Json library for c language
-  URL:=https://github.com/DaveGamble/cJSON
+	SECTION:=libs
+	CATEGORY:=Pi_routes_os
+	TITLE:=Json library for c language
+ 	URL:=https://github.com/DaveGamble/cJSON
 endef
 
 define Package/libcjson/description
-  This library provides functions for cjson.
+ 	This library provides functions for cjson.
 endef
 
 define Package/libcjson/install
-  $(INSTALL_DIR) $(1)/usr
-  $(CP) $(PKG_INSTALL_DIR)/usr/* $(1)/usr
+ 	$(INSTALL_DIR) $(1)/usr
+ 	$(CP) $(PKG_INSTALL_DIR)/usr/* $(1)/usr
 endef
 
 $(eval $(call BuildPackage,libcjson))

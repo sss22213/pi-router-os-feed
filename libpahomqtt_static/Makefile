@@ -16,25 +16,25 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/libpahomqtt_static
-  SECTION:=libs
-  CATEGORY:=Pi_routes_os
-  TITLE:=Eclipse paho mqtt c library
-  URL:=https://github.com/eclipse/paho.mqtt.c.git
+	SECTION:=libs
+	CATEGORY:=Pi_routes_os
+	TITLE:=Eclipse paho mqtt c library
+	URL:=https://github.com/eclipse/paho.mqtt.c.git
 endef
 
 CMAKE_OPTIONS:=-DPAHO_BUILD_STATIC=TRUE -DPAHO_WITH_SSL=FALSE -DPAHO_HIGH_PERFORMANCE=TRUE
 
 define Package/libpahomqtt_static/description
-  This library provides functions for mqtt client.
+	This library provides functions for mqtt client.
 endef
 
 define Package/libpahomqtt_static/install
-  $(INSTALL_DIR) $(1)/usr/include
-  $(INSTALL_DIR) $(1)/usr/lib
-  $(INSTALL_DIR) $(1)/usr/share
-  $(CP) $(PKG_INSTALL_DIR)/usr/include/* $(1)/usr/include
-  $(CP) $(PKG_INSTALL_DIR)/usr/lib/*.a $(1)/usr/lib
-  $(CP) $(PKG_INSTALL_DIR)/usr/share/* $(1)/usr/share
+	$(INSTALL_DIR) $(1)/usr/include
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(INSTALL_DIR) $(1)/usr/share
+  	$(CP) $(PKG_INSTALL_DIR)/usr/include/* $(1)/usr/include
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/*.a $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/share/* $(1)/usr/share
 endef
 
 $(eval $(call BuildPackage,libpahomqtt_static))
