@@ -17,7 +17,7 @@ include $(INCLUDE_DIR)/cmake.mk
 
 define Package/libcjson
 	SECTION:=libs
-	CATEGORY:=Pi_routes_os
+	CATEGORY:=PiRoutesOS
 	TITLE:=Json library for c language
  	URL:=https://github.com/DaveGamble/cJSON
 endef

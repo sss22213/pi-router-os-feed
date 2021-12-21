@@ -17,7 +17,7 @@ include $(INCLUDE_DIR)/cmake.mk
 
 define Package/libpahomqttstatic
 	SECTION:=libs
-	CATEGORY:=Pi_routes_os
+	CATEGORY:=PiRoutesOS
 	TITLE:=Eclipse paho mqtt c library
 	URL:=https://github.com/eclipse/paho.mqtt.c.git
 endef
