@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=libpahomqtt_static
+PKG_NAME:=libpahomqttstatic
 PKG_VERSION:=1.3.9
 PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
@@ -15,7 +15,7 @@ PKG_LICENSE:=Eclipse Public License 2.0
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/libpahomqtt_static
+define Package/libpahomqttstatic
 	SECTION:=libs
 	CATEGORY:=Pi_routes_os
 	TITLE:=Eclipse paho mqtt c library
@@ -28,7 +28,7 @@ define Package/libpahomqtt_static/description
 	This library provides functions for mqtt client.
 endef
 
-define Package/libpahomqtt_static/install
+define Package/libpahomqttstatic/install
 	$(INSTALL_DIR) $(1)/usr/include
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(INSTALL_DIR) $(1)/usr/share
@@ -37,4 +37,4 @@ define Package/libpahomqtt_static/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/share/* $(1)/usr/share
 endef
 
-$(eval $(call BuildPackage,libpahomqtt_static))
+$(eval $(call BuildPackage,libpahomqttstatic))
